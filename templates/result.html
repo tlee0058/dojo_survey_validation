@@ -1,0 +1,38 @@
+<html>
+    <head>
+            <meta charset="UTF-8">
+            <title>Result of Dojo Survey</title>
+    </head>
+    <body>
+        <table>
+            <tr>
+                <th>Name:</th>
+                <td>{{name}}</td>
+            </tr>
+            <tr>
+                <th>Location:</th>
+                <td>{{ location }}</td>
+            </tr>
+            <tr>
+                <th>Favorite Language:</th>
+                <td>{{ language }}</td>
+            </tr>
+            <tr>
+                <th>Comment:</th>
+                <td>{{ comment }}</td>
+            </tr>
+
+        </table>
+        <h2>Validation results</h2>
+        {%with messages = get_flashed_messages() %}
+        
+        {% if messages %}
+        {% for message in messages %}
+            <p>{{message}}</p>
+        {%endfor%}
+        {%endif%}
+        {%endwith%}
+        
+    </body>
+
+</html>
